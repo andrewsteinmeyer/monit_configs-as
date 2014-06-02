@@ -1,0 +1,6 @@
+#Monitoring PHP5-FPM
+
+check process php5-fpm with pidfile /var/run/php5-fpm.pid
+  start program = "/etc/init.d/php5-fpm start"
+  stop program = "/etc/init.d/php5-fpm stop"
+  if 15 restarts within 15 cycles then timeout
